@@ -1,0 +1,27 @@
+#backimg{
+    width: 100%;
+    height: 100vh;
+    background-image: url('photo.jpg');
+    background-size: cover;
+    border: 5px solid white;
+
+}
+.logo{
+    list-style: none;
+}
+li{
+    display: inline-block;
+    text-align: center;
+    margin: 80px;
+}
+.heading{
+    text-align: center;
+    color: darkslategray;
+}
+H2{
+    text-align: center;
+}
+.content{
+    font-size: 2em;
+    color: rgb(238, 15, 15);
+}

@@ -22,6 +22,72 @@
         .btn {
             margin-right:4rem;
         }
+        #CompoundInterestCalculator {
+            max-width: 350px;
+            margin: 4rem auto;
+            display: flex;
+          
+            flex-direction: column;
+            gap: 15px;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 3px 15px 3px rgba(0, 0, 0, 0.6);
+          }
+          label {
+            border: none;
+            outline: none;
+            padding: 0.05rem;
+            border-radius: 50px;
+            height: 60px;
+            font-size: 1.9rem;
+            background-color: #164372;
+            color: #fff;
+            box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.2);
+          }
+          input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button {
+    cursor: pointer;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: none;
+    outline: none;
+  
+    background-color: #4ad295;
+    color: #fff;
+    border-radius: 5px;
+  }
+  button:hover {
+    background-color: #319166;
+    color: #eee;
+  }
+  #append{
+    width: fit-content;
+    margin: 1rem auto;
+    color: #4ad295;
+    padding: 0.75rem;
+    border-radius: 5px;
+    background-color: #164372;
+    box-shadow: 0 3px 15px 3px rgba(0, 0, 0, 0.6);
+  }
+  .title.fade {
+    animation: fadeIn 0.2s linear;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
         </style>
     <title>Return calculator</title>
 </head>
@@ -38,9 +104,10 @@
             <a href="http://127.0.0.1:8000/" class="mr-5 hover:text-gray-900">Home</a>
             <a href="http://127.0.0.1:8000/advice" class="mr-5 hover:text-gray-900">Advices</a>
             <a href="http://127.0.0.1:8000/returns" class="mr-5 hover:text-gray-900">Return calculator</a>
-            <a href="http://127.0.0.1:8000/prices" class="mr-5 hover:text-gray-900">stockprices</a>
-            <a href="http://127.0.0.1:8000/contact" class="mr-5 hover:text-gray-900">contact</a>
+            <a href="http://127.0.0.1:8000/prices" class="mr-5 hover:text-gray-900">Stockprices</a>
+            <a href="http://127.0.0.1:8000/contact" class="mr-5 hover:text-gray-900">Contact</a>
             <a href="http://127.0.0.1:8000/forex" class="mr-5 hover:text-gray-900">Forex prices</a>
+            <a href="http://127.0.0.1:8000/about" class="mr-5 hover:text-gray-900">About us</a>
 
 
             </nav>
@@ -69,30 +136,31 @@
                 <div class="form-group">
                     <label for="principal">What is the principal?</label>
                     <input class="form-control" id="principal" placeholder="Starting amount" type="text">
+                
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="years">How many years will interest be compounded?</label>
                     <input class="form-control" id="years" placeholder="Number of years" type="text">
+    
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="cycles">How many cycles per year will Interest be compounded?</label>
                     <input class="form-control" id="cycles" placeholder="Compound cycles/frequency per year" type="text">
                 </div>
-                <br>  
                 <div class="form-group">
-                    <label for="int-rate">What is the interest rate?</label>
+                    <label for="int-rate">What is the interest rate per annum?</label>
                     <input class="form-control" id="int-rate" placeholder="Interest rate %" type="text">
                 </div>
             <br>
             <br>
                 <div class="calc col-md-offset-3">
-                    <button type="submit" id="button" class="btn btn-danger col-sm-3"><b>Calculate</b></button>
+                   
+                    <button type="button" id="myButton" class="btn btn-danger col-sm-3">Calculate</button>
                 </div>
                 <div class="calc">
-                    <button type="submit" id="clear" class="btn btn-danger col-sm-2 "><b>Clear</b></button>
+                    <button type="submit" id="clear" class="btn btn-danger col-sm-2 ">Clear</button>
                 </div>
+                
             <br>
             <br>
                 <div id="append"></div>	
@@ -100,6 +168,6 @@
         </div>
     </div>
 </div>
-
+ <script src="{% static 'calculator.js' %}"></script> 
 </body>
 </html>
