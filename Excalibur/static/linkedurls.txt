@@ -1,0 +1,6 @@
+http://127.0.0.1:8000/about
+http://127.0.0.1:8000/learn
+http://127.0.0.1:8000/advicestoday
+http://127.0.0.1:8000/investmentreturn
+http://127.0.0.1:8000/contact
+http://127.0.0.1:8000/stockprices

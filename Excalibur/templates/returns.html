@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    
+    <style>
+        #main-heading {
+            text-align: center;
+            font-size: 40px;
+        
+        }
+        
+        #append{
+            margin-top: 2em;
+        }
+        
+        .btn {
+            margin-right:4rem;
+        }
+        </style>
+    <title>Return calculator</title>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+              <img src="{% static 'download.png' %}" width="50"alt="">  
+                <span class="ml-3 text-xl">Junoon</span>
+            </a>
+            <nav
+            class="md:mr-auto md:ml-5 md:py-1 md:pl-5 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a href="http://127.0.0.1:8000/" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="http://127.0.0.1:8000/advice" class="mr-5 hover:text-gray-900">Advices</a>
+            <a href="http://127.0.0.1:8000/returns" class="mr-5 hover:text-gray-900">Return calculator</a>
+            <a href="http://127.0.0.1:8000/prices" class="mr-5 hover:text-gray-900">stockprices</a>
+            <a href="http://127.0.0.1:8000/contact" class="mr-5 hover:text-gray-900">contact</a>
+            <a href="http://127.0.0.1:8000/forex" class="mr-5 hover:text-gray-900">Forex prices</a>
+
+
+            </nav>
+            <button
+                class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                <a href="http://127.0.0.1:8000/learn">learn</a>
+            </button>
+        </div>
+    </header>
+
+</body>
+<body>
+  <div class="prose">
+    <!-- ... -->
+  </div>
+  <div class="container">
+    <div class="row">
+  <h2 id="main-heading">Compound Interest Calculator</h2>
+        <div class="col-xs-6 col-md-offset-3" style="margin-top: 5rem">
+            
+            <form action="" method="">
+                <div class="form-group">
+                    <label for="principal">What is the principal?</label>
+                    <input class="form-control" id="principal" placeholder="Starting amount" type="text">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="years">How many years will interest be compounded?</label>
+                    <input class="form-control" id="years" placeholder="Number of years" type="text">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="cycles">How many cycles per year will Interest be compounded?</label>
+                    <input class="form-control" id="cycles" placeholder="Compound cycles/frequency per year" type="text">
+                </div>
+                <br>  
+                <div class="form-group">
+                    <label for="int-rate">What is the interest rate?</label>
+                    <input class="form-control" id="int-rate" placeholder="Interest rate %" type="text">
+                </div>
+            <br>
+            <br>
+                <div class="calc col-md-offset-3">
+                    <button type="submit" id="button" class="btn btn-danger col-sm-3"><b>Calculate</b></button>
+                </div>
+                <div class="calc">
+                    <button type="submit" id="clear" class="btn btn-danger col-sm-2 "><b>Clear</b></button>
+                </div>
+            <br>
+            <br>
+                <div id="append"></div>	
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

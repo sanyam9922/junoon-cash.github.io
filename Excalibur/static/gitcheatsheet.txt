@@ -1,0 +1,24 @@
+git init-->to initialize git repository
+git status
+git add file_name--> to stage a particular file or
+git add . --> for all files
+git commit -m "message"-->commit all the changes in staging area
+git log--> give details about commits on particular project 
+
+head is a pointer 
+
+git checkout hex_code --> to go to a particular commit
+git checkout master--> return to master branch after the jumping to other commits.
+git branch to check on which branch we are.
+git branch BRANCH_NAME --> To make a new branch of the project
+git checkout -b new_branch_name-->to make a new branch and checkout on that branch automatically
+git merge branch_name --> merge the branch_name with current checkout branch
+git ignore -->to prevent files to go in git
+create a file name .gitignore and paste file name into it.
+
+
+//now tutorial to push code on github
+git remote add origin linktoonlinerepo ssh
+git remote -v --> this displays the fetch and push links
+git push -u origin branch_name
+git branch -M dev--> before push new branch that will be made in github.

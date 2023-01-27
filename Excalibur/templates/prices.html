@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+   
+
+    <title>Prices</title>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <img src="{% static 'download.png' %}" width="50"alt="">  
+                <span class="ml-3 text-xl">Junoon</span>
+            </a>
+            <nav
+            class="md:mr-auto md:ml-5 md:py-1 md:pl-5 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a href="http://127.0.0.1:8000/" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="http://127.0.0.1:8000/advice" class="mr-5 hover:text-gray-900">Advices</a>
+            <a href="http://127.0.0.1:8000/returns" class="mr-5 hover:text-gray-900">Return calculator</a>
+            <a href="http://127.0.0.1:8000/prices" class="mr-5 hover:text-gray-900">stockprices</a>
+            <a href="http://127.0.0.1:8000/contact" class="mr-5 hover:text-gray-900">contact</a>
+            <a href="http://127.0.0.1:8000/forex" class="mr-5 hover:text-gray-900">Forex prices</a>
+
+
+            </nav>
+            <button
+                class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                <a href="http://127.0.0.1:8000/learn">learn</a>
+            </button>
+        </div>
+    </header>
+
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div id="tradingview_732be"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL stock chart</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget(
+    {
+    "width": 980,
+    "height": 600   ,
+    "symbol": "NASDAQ:AAPL",
+    "interval": "D",
+    "timezone": "Etc/UTC",
+    "theme": "light",
+    "style": "1",
+    "locale": "en",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "allow_symbol_change": true,
+    "container_id": "tradingview_732be"
+  }
+    );
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+</body>
+
+</html>

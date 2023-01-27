@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Learn</title>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+              <img src="{% static 'download.png' %}" width="50"alt="">  
+                <span class="ml-3 text-xl">Junoon</span>
+            </a>
+            <nav
+            class="md:mr-auto md:ml-5 md:py-1 md:pl-5 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a href="http://127.0.0.1:8000/" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="http://127.0.0.1:8000/advice" class="mr-5 hover:text-gray-900">Advices</a>
+            <a href="http://127.0.0.1:8000/returns" class="mr-5 hover:text-gray-900">Return calculator</a>
+            <a href="http://127.0.0.1:8000/prices" class="mr-5 hover:text-gray-900">stockprices</a>
+            <a href="http://127.0.0.1:8000/contact" class="mr-5 hover:text-gray-900">contact</a>
+            <a href="http://127.0.0.1:8000/forex" class="mr-5 hover:text-gray-900">Forex prices</a>
+
+            </nav>
+            
+        </div>
+    </header>
+
+    <body>
+          <div class="prose">
+            <!-- ... -->
+          </div>
+          <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="flex flex-wrap -mx-4 -mb-10 text-center">
+                <div class="sm:w-1/2 mb-10 px-4">
+                  <div class="rounded-lg h-64 overflow-hidden">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3UF0ymVdYLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">Youtuber 1</h2>
+                  <p class="leading-relaxed text-base">These videos are taken from various sources like youtube. They will help you in learning about stocks</p>
+                  <button class="flex mx-auto mt-6 text-white bg-yellow-500 border-0 py-2 px-5 focus:outline-none hover:bg-yellow-600 rounded">
+                    <a href="https://www.youtube.com/results?search_query=stock+market+for+beginners">Link for more videos</a>
+                  </button>
+                </div>
+                <div class="sm:w-1/2 mb-10 px-4">
+                  <div class="rounded-lg h-64 overflow-hidden">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HNPbY6fSeo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">Youtuber 2</h2>
+                  <p class="leading-relaxed text-base">These videos are taken from various sources like youtube. They will help you in learning about stocks</p>
+                  
+                </div>
+              </div>
+            </div>
+          </section>
+          
+        </body>
+</body>
+
+</html>
